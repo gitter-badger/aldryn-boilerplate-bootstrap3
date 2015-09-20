@@ -38,7 +38,8 @@ var Cl = window.Cl || {};
         },
 
         /**
-         * Stubs all the methods from console api that are not available in current environment
+         * Stubs all the methods from console api that are not available
+         * in current environment
          * DOCS: https://developer.chrome.com/devtools/docs/console-api
          *
          * @method _consoleWrapper
@@ -50,9 +51,9 @@ var Cl = window.Cl || {};
             var noop = function () {};
             var methods = [
                 'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-                'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-                'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-                'timeStamp', 'trace', 'warn'
+                'exception', 'group', 'groupCollapsed', 'groupEnd', 'info',
+                'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time',
+                'timeEnd', 'timeStamp', 'trace', 'warn',
             ];
             var length = methods.length;
             // istanbul ignore next
@@ -123,7 +124,7 @@ var Cl = window.Cl || {};
             } catch (e) {
                 return false;
             }
-        }())
+        }()),
     };
 
 })(jQuery);

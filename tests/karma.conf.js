@@ -12,13 +12,13 @@ var baseConf = require('./base.conf');
 
 module.exports = function (config) {
     var browsers = {
-        'PhantomJS': 'used for local testing'
+        PhantomJS: 'used for local testing'
     };
 
     // Browsers to run on Sauce Labs
     // Check out https://saucelabs.com/platforms for all browser/OS combos
     if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
-        browsers = baseConf.sauceLabsBrowsers.reduce(function (browsers, capability) {
+        browsers = baseConf.sauceLabsBrowsers.reduce((browsers, capability) => {
             browsers[JSON.stringify(capability)] = capability;
             browsers[JSON.stringify(capability)].base = 'SauceLabs';
             return browsers;
@@ -26,7 +26,8 @@ module.exports = function (config) {
     }
 
     var settings = {
-        // base path that will be used to resolve all patterns (eg. files, exclude)
+        // base path that will be used to resolve all patterns
+        // (eg. files, exclude)
         basePath: '..',
 
         // frameworks to use
@@ -51,7 +52,7 @@ module.exports = function (config) {
             // fixture patterns
             {
                 pattern: 'tests/fixtures/**/*'
-            }
+            },
         ],
 
         // list of files to exclude
@@ -67,14 +68,14 @@ module.exports = function (config) {
             'static/js/addons/cl.utils.js': ['coverage'],
             // for fixtures
             '**/*.html': ['html2js'],
-            '**/*.json': ['json_fixtures']
+            '**/*.json': ['json_fixtures'],
         },
 
         // optionally, configure the reporter
         coverageReporter: {
             reporters: [
                 { type: 'html', dir: 'tests/coverage/' },
-                { type: 'lcov', dir: 'tests/coverage/' }
+                { type: 'lcov', dir: 'tests/coverage/' },
             ]
         },
 
@@ -97,10 +98,12 @@ module.exports = function (config) {
 
         // level of logging
         // possible values:
-        // config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+        // config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN ||
+        // config.LOG_INFO || config.LOG_DEBUG
         logLevel: config.LOG_INFO,
 
-        // enable / disable watching file and executing tests whenever any file changes
+        // enable / disable watching file and executing tests
+        // whenever any file changes
         autoWatch: true,
 
         // start these browsers
@@ -109,7 +112,7 @@ module.exports = function (config) {
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: false
+        singleRun: false,
     };
 
     if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {

@@ -29,8 +29,8 @@ var Cl = window.Cl || {};
         // DOCS: https://github.com/burocratik/outdated-browser
         if (window.outdatedBrowser) {
             outdatedBrowser({
-                'languagePath': '',
-                'lowerThan': 'boxShadow'
+                languagePath: '',
+                lowerThan: 'boxShadow',
             });
         }
     });

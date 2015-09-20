@@ -16,8 +16,8 @@ var browsers = baseConf.sauceLabsBrowsers;
 var config = {
     // Capabilities to be passed to the webdriver instance.
     capabilities: {
-        'browserName': 'phantomjs',
-        'phantomjs.binary.path': require('phantomjs').path
+        browserName: 'phantomjs',
+        'phantomjs.binary.path': require('phantomjs').path,
     },
 
     onPrepare: function () {
@@ -27,8 +27,8 @@ var config = {
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {
         showColors: true,
-        defaultTimeoutInterval: 240000
-    }
+        defaultTimeoutInterval: 240000,
+    },
 };
 
 if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {

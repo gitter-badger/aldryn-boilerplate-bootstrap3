@@ -17,9 +17,9 @@ module.exports = {
             process.env.TRAVIS_REPO_SLUG,
             (process.env.TRAVIS_PULL_REQUEST !== 'false' ?
             'pull request #' + process.env.TRAVIS_PULL_REQUEST : ''),
-            'build #' + process.env.TRAVIS_JOB_NUMBER
+            'build #' + process.env.TRAVIS_JOB_NUMBER,
         ].join(' ');
     },
 
-    sauceLabsBrowsers: b2s()
+    sauceLabsBrowsers: b2s(),
 };
