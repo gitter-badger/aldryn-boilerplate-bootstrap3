@@ -1,13 +1,20 @@
 {
     "preset": "crockford",
 
+    "esnext": true,
     "maximumLineLength": {
-        "value": 120,
+        "value": 80,
         "allowRegex": true,
         "allowUrlComments": true
     },
-    "disallowQuotedKeysInObjects": null,
-    "requireMultipleVarDecl": null,
-    "disallowDanglingUnderscores": null,
-    "requireVarDeclFirst": null
+    "disallowQuotedKeysInObjects": true,
+    "requireMultipleVarDecl": false,
+    "disallowDanglingUnderscores": false,
+    "requireVarDeclFirst": false,
+    "disallowTrailingComma": false,
+    "requireTrailingComma": {
+        "value": true,
+        "ignoreSingleValue": true,
+        "ignoreSingleLine": true
+    }
 }
