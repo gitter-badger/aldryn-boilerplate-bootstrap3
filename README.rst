@@ -42,3 +42,8 @@ needs love. Feel free to fork and send us pull requests and checkout the
    :target: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3
 .. |Browser Matrix| image:: https://saucelabs.com/browser-matrix/aldryn-boilerboot3.svg
    :target: https://saucelabs.com/u/aldryn-boilerboot3
+
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/aldryn/aldryn-boilerplate-bootstrap3
+   :target: https://gitter.im/aldryn/aldryn-boilerplate-bootstrap3?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
